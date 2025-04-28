@@ -153,8 +153,8 @@
             "healing potion": 3
         }
     },
-    "current room": "Starting Room",
-    "previous room": "The Drowned Gate",
+    "current room": "The Drowned Gate",
+    "previous room": "Starting Room",
     "equipment": {
         "Rusty Sword": {
             "type": "weapon",
