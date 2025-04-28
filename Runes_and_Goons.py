@@ -56,12 +56,12 @@ class equipment_inventory(object):
         self.healing_potions = game_data['healing potions']
 
 
-def saver():
+def saver(mapinstance, playerinstance, inventoryinstance):
     game_data = {'map': mapinstance.rooms,
     'current room' : mapinstance.current_room,
     'previous room' : mapinstance.previous_room,
-    'equipment': player_inventory.weapons_and_spells,
-    'healing potions':player_inventory.healing_potions,
+    'equipment': inventoryinstance.weapons_and_spells,
+    'healing potions':inventoryinstance.healing_potions,
     'player health': playerinstance.health}
     
     with open('game_data.json', 'w') as json_file:
@@ -129,7 +129,7 @@ while not gameover:
 
     pickup_items(mapinstance, player_inventory)
 
-    saver()
+    saver(mapinstance, playerinstance, player_inventory)
 
 
 print('\n\nGAME OVER\n\n')
