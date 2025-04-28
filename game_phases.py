@@ -135,7 +135,10 @@ def combat(mapinstance, playerinstance, inventoryinstance):
 
                         #listing the names of weapons and spells and their values
                         for name_weaponspell, weaponspells_dict in inventoryinstance.weapons_and_spells.items():
-                            print(f'{name_weaponspell}: {weaponspells_dict['attributes']}')
+                            #print(f'{name_weaponspell}: {weaponspells_dict['attributes']}')
+                            print(f'{name_weaponspell}:')
+                            for attribute in weaponspells_dict['attributes']:
+                                print(f"    {attribute}: {weaponspells_dict['attributes'][attribute]}")
 
                         while True: #checking for valid attack
                             selected_attack = str(input("\ntype name of weapon or spell: ")).title()
